@@ -21,16 +21,29 @@ class PatronTest < Minitest::Test
   end
 
   def test_it_can_have_multiple_interests
-    patron = Patron.new("Bob",)
-    patron.add_interest("Dead Sea Scrolls")
-    patron.add_interest("Gems and Minerals")
-    assert_equal ["Dead Sea Scrolls", "Gems and Minerals"], patron.interests
+    patron_1 = Patron.new("Bob")
+    patron_2 = Patron.new("Sally")
+    patron_1.add_interest("Dead Sea Scrolls")
+    patron_1.add_interest("Gems and Minerals")
+    patron_1.add_interest("Imax")
+
+    patron_2.add_interest("Dead Sea Scrolls")
+    assert_equal ["Dead Sea Scrolls", "Gems and Minerals","Imax"], patron_1.interests
   end
+
+
 
 end
 
 
 
+
+# > dmns.revenue
+# #=> 0
+# > dmns.admit(bob)
+# > dmns.admit(sally)
+# > dmns.revenue
+# #=> 40
 
 
 

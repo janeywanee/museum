@@ -21,4 +21,21 @@ class MuseumTest < Minitest::Test
     assert dmns.add_exhibit("Dead Sea Scrolls", 10)
     assert dmns.add_exhibit("Gems and Minerals", 0)
   end
+
+  def test_it_has_revenue
+    dmns = Museum.new("Denver Museum of Nature and Science")
+    assert_equal 0, dmns.revenue
+  end
+
+  def
+
+  end
 end
+
+
+
+
+# > dmns.admit(bob)
+# > dmns.admit(sally)
+# > dmns.revenue
+# #=> 40
