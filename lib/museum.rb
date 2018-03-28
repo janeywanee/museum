@@ -6,10 +6,16 @@ class Museum
     @exhibit = []
     @amount = 0
     @revenue = 0
+    @patrons = []
+
   end
 
   def add_exhibit(exhibit, cost)
     @exhibit << exhibit
     @amount += cost
+  end
+
+  def admit(name)
+    @patrons << name
   end
 end

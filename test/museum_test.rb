@@ -27,15 +27,31 @@ class MuseumTest < Minitest::Test
     assert_equal 0, dmns.revenue
   end
 
-  def
+  def test_it_can_admit_a_patron
+    dmns = Museum.new("Denver Museum of Nature and Science")
+    assert dmns.admit("bob")
+    assert dmns.admit("sally")
 
+    assert_equal 2, dmns.admit(2)
   end
+
+  def test_amount_of_patrons
+    skip
+    dmns = Museum.new("Denver Museum of Nature and Science")
+    assert .count
+  end
+
+  def test_its_exhibit_by_attendees
+    skip
+    dmns = Museum.new("Denver Museum of Nature and Science")
+    assert .exhibits_by_attendees
+  end
+
+  def test_it_can_remove_unpopular_exhibits
+    skip
+    dmns = Museum.new("Denver Museum of Nature and Science")
+
+    .remove_unpopular_exhibits(threshold)
+  end
+
 end
-
-
-
-
-# > dmns.admit(bob)
-# > dmns.admit(sally)
-# > dmns.revenue
-# #=> 40
