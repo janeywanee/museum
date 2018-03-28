@@ -4,16 +4,11 @@ class Museum
   def initialize(name)
     @name = name
     @exhibit = []
-    @cost = 0
+    @amount = 0
   end
 
-  def add_exhibit(exhibit)
+  def add_exhibit(exhibit, cost)
     @exhibit << exhibit
+    @amount += cost
   end
-
-  def cost(money)
-    @cost += money
-
-  end
-
 end

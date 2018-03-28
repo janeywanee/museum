@@ -16,18 +16,9 @@ class MuseumTest < Minitest::Test
     assert_equal "Denver Museum of Nature and Science", dmns.name
   end
 
-  def test_it_has_an_exhibit
+  def test_it_has_an_exhibit_with_a_cost
     dmns = Museum.new("Denver Museum of Nature and Science")
-
-    assert dmns.add_exhibit("Gems and Minerals")
+    assert dmns.add_exhibit("Dead Sea Scrolls", 10)
+    assert dmns.add_exhibit("Gems and Minerals", 0)
   end
-
-  def test_each_exhibit_has_a_cost
-    dmns = Museum.new("Denver Museum of Nature and Science")
-    dmns.add_exhibit("Dead Sea Scrolls")
-    assert_equal 10, dmns.cost(10)
-  end
-
-
-
 end
