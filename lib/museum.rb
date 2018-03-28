@@ -17,5 +17,6 @@ class Museum
 
   def admit(name)
     @patrons << name
+    @@revenue +=
   end
 end
